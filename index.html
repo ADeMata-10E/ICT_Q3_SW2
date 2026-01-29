@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrams Page</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #510b28;
+            color: #f8ccbd;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ddaabc;
+            color: #510b28;
+            padding: 20px;
+            border-radius: 13px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #f8ccbd;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8ccbd;
+            color: #510b28;
+            border-radius: 8px;
+        }
+
+        .button {
+            background-color: #510b28;
+            color: #f8ccbd;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .container_enhancement {
+            display: block;
+            position: relative;
+            margin: 12px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <body>
+        <h2 align="center">Student Registry</h2> 
+        <form class="container" id="onlineRegistry_check">
+        <p>Are you done with the online registration?</p>
+            <label class="container">Yes <input type="radio" id="yesbutton" name="radio" value="Done">
+            <span class="checkmark"></span>
+            <label class="container">No <input type="radio" id="nobutton" name="radio" value="notDone">
+            <span class="checkmark"></span>
+            </label>
+        </form>
+        <form class="medicalClearance">
+            <p>Do you have medical clearance from the clinic?</p>
+                <label class="container">Yes
+                    <input type="radio" id="yesbutton" name="permissionApproved" value="studentCleared">
+                    <span class="checkmark"></span>
+                    <label class="container">No
+                    <input type="radio" id="nobutton" name="permissionDenied" value="student_NotCleared">
+                    <span class="checkmark"></span>
+                </label>
+        </form>
+
+        <p>What is your section?</p>
+            <dropdown class="container_enhancement">
+                <select id="gradelevelSelector" name="sections">
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    </select>
+                <select id="sectionSelector" name="sections">
+                    <option value="EM10E">Emerald</option>
+                    <option value="RM10R">Ruby</option>
+                    <option value="SP10S">Sapphire</option>
+                    <option value="TP10T">Topaz</option>
+                </select>
+            <br><br>
+
+            <input type="button" py-click="teamRegistry"  class="button" value="Submit">
+            <div class="container" id="output"></div>
+            <py-script src="main.py"></py-script>
+
+            
+
+
+            <!--do we REALLY have to abide by JUST the buttons :imp_smile: quote by me making this-->
+    </form>
+
+
+
+   
+</body>
+</html>
